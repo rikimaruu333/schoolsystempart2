@@ -1,0 +1,274 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-image: url(../images/school.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+    .daddycontainer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;    
+    }
+    .headcontainer{
+        padding-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+        width: 100%;
+    }
+    .pagecontainer{
+        height: 630px;
+        width: 98%;
+        color: white;
+    }
+    .sponsorlogocontainer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        top: 20px;
+        height: 120px;
+        width: 100%;
+        background-color: #111113;
+    }
+    .logo{
+        position: relative;
+        height: 100px;
+        left: 60px;
+    }
+    .textcontainer{
+        position: relative;
+        top: 60px;
+        left: 200px;
+    }
+    .hellotxt{
+        cursor: default;
+        position: relative;
+        right: 30px;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 130px;
+    }
+    .hello {
+        cursor: default;
+        transition: all 0.3s;
+        animation: textStrokeAnimation 5s infinite; 
+    }
+    
+    @keyframes textStrokeAnimation {
+        0% {
+            
+        }
+        25% {
+            
+        }
+        50% {
+            -webkit-text-stroke: 0.5px white; /* Adjust the stroke width as needed */
+            color: transparent;
+        }
+        75% {
+            
+        }
+        100% {
+            
+        }
+    }
+    .user{
+        cursor: default;
+        transition: all 0.3s;
+        animation: colorChange 3s infinite; /* Adjust the duration as needed */
+    }
+    @keyframes colorChange {
+        0% {
+            color: #2715ec;
+        }
+        25% {
+            color: #170b9c; /* Change to the color you want at 25% */
+        }
+        50% {
+            color: #2715ec; /* Change to the color you want at 50% */
+        }
+        75% {
+            color: #170b9c; /* Change to the color you want at 75% */
+        }
+        100% {
+            color: #2715ec;
+        }
+    }
+    
+    .welcome{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+    .signup-buttons{
+        position: relative;
+        left: 180px;
+        top: 50px;
+    }
+    .clientsignup_btn{
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+    
+        padding: 1.5em 2.5em;
+        background-color: #1F1779;
+        border: 5px solid transparent;
+        border-radius: 20px;
+    
+        transition: all 0.3s;
+    }
+    
+    .clientsignup_btn:hover{
+        transform: translateY(-5px);
+        background-color: #2715ec;
+    }
+    .freelancersignup_btn{
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+    
+        padding: 1.5em 2.5em;
+        background-color: #D9D9D9;
+        border: 5px solid transparent;
+        border-radius: 20px;
+    
+        transition: all 0.3s;
+    
+        position: relative;
+        left: 20px;
+    }
+    .freelancersignup_btn:hover{
+        transform: translateY(-5px);
+        background-color: #888080;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      .modal-content {
+        position: fixed;
+        top: 50%;
+        left: 80%;
+        min-width: 20vw;
+        min-height: 80vh;
+        max-height: 80vh;
+        transform: translate(-50%, -50%);
+        padding: 40px;
+        background-color: #efefef;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      
+      .close, .closeupdate {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .closeupdate:hover,
+      .closeupdate:focus,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      /* Style for input fields and button */
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+      }
+      
+      
+      /* Style for the selected file name display */
+      #selectedFileName {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #555;
+      }
+    
+      form{
+        margin-top: 20px;
+      }
+      .icon{
+          height: 20px;
+          width: 20px;
+      }
+    
+.eyebutton{
+    position: absolute;
+    right: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0;
+    background-color: #131124;
+}
+.eyebutton:hover{
+    opacity: 0.9;
+}
+.eyebutton:active{
+    opacity: 0.8;
+}
+
+.login_btn{
+    position: absolute;
+    bottom: 40%;
+    right: 15%;
+
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    
+    background-color: #1F1779;
+    border-radius: 20px;
+
+    font-weight: 700;
+    color: white;
+
+    padding: 0.7em 2.5em;
+    border: none;
+
+    transition: all 0.3s;
+}
+
+.login_btn:hover{
+    transform: translateY(-3px);
+    background-color: #2d1de1;
+
+}

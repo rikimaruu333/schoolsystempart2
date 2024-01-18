@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    overflow: hidden;
+    background-color: rgba(46, 46, 101, 0.716);
+}
+.logo img{
+    position: absolute;
+    top: 30px;
+    width: 150px;
+    height: 150px;
+}
+.logo span{
+    position: absolute;
+    top: 30%;
+    font-size: small;
+    font-weight: 600;
+}
+.user img{
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    border-radius: 100%;
+    border: 0;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: rgb(16, 16, 32);
+    padding: 0.4rem 0.8rem;
+    transition: all 0.5s ease;
+}
+.sidebar.active ~ .main-content{
+    left: 270px;
+    width: calc(100% - 270px);
+}
+.sidebar.active{
+    width: 270px;
+    background-color: rgba(46, 46, 101, 0.716);
+    transition: all 0.7s;
+}
+.sidebar #sidebarbtn{
+    position: absolute;
+    color: white;
+    top: 0.4rem;
+    left: 50%;
+    font-size: 1.3rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 1s;
+}
+.sidebar #sidebarbtn:hover{
+    font-size: 1.4rem;
+}
+.sidebar.active #sidebarbtn{
+    left: 85%;
+}
+.sidebar .top .logo{
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+.sidebar.active .top .logo{
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top{
+    margin-bottom: 20px;
+}
+.top .logo span{
+    margin-right: 5px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin-left: 0.15rem;
+}
+.sidebar.active .user{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    position: absolute;
+    bottom: 13px;
+}
+.user p{
+    color: white;
+    opacity: 1;
+    margin-left: 1rem;
+}
+.name{
+    font-weight: 600;
+}
+.rank{
+    font-size: small;
+}
+.sidebar p{
+    opacity: 0;
+}
+.sidebar.active p{
+    opacity: 1;
+}
+.sidebar ul li{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+.sidebar.active ul .dashboard_btn{
+    display: none;
+}
+.sidebar ul li .admindashboard_btn{
+    background: radial-gradient(white,transparent);
+    color: black;
+    pointer-events: none;
+}
+.sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+.sidebar ul li a:hover{
+    background-color: white;
+    color: black;
+}
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+.sidebar.active .logout_btn{
+    max-width: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 11%;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+    border-radius: 10px ;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(152, 154, 170);
+    border-radius: 10px ;
+}
+.main-content{
+    position: relative;
+    background-color: #d8d6eb;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+}
+.maincontainer{
+    max-width: 72%;
+    max-height: 99vh;
+    background-color: #d8d6eb;
+}
+.studentboxcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%;
+}
+.studenttxt{
+    font-weight: 700;
+    margin: 20px;
+}
+.student-box{
+    max-height: 85vh;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 10px solid transparent;
+    outline: 1px solid rgb(169, 169, 169);
+    overflow-y: auto;
+}
+.nostudent{
+    font-weight: 600;
+    margin: 20px;
+}
+.student-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 15px;
+    border: 1px solid rgba(156, 156, 156, 0.658);
+    border-radius: 20px;
+    background-color: #e3e2e8;
+    min-height: 80px;
+    max-height: 80px;
+}
+.studentprofileinfo{
+    display: flex;
+    align-items: center;
+}
+.student-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.student-profile img{
+    height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    background-color: rgb(16, 16, 32);
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.student-info {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 30px 0 0;
+    color: rgba(46, 45, 50, 0.807);
+}
+.student-type {
+    font-size: small;
+    color: #5a5a68;
+}
+.courselevel{
+    font-size: small;
+    color: #5a5a68;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin: 0 5px 0 5px;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #131124;
+    color: white;
+}
+button:hover{
+    opacity: 0.9;
+}
+button:active{
+    opacity: 0.8;
+}
+.view-student-button img{
+    height: 20px;
+    width: 20px;
+}
+
+.filterbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(46, 46, 101, 0.834);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.815);
+    width: 28%;
+    height: 100vh;
+}
+form{
+    width: 60%;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: white;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 11px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.filter{
+    padding: 10px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.filter-button {
+    display: flex;
+    align-items: center;
+    background-color: #191cdf;
+    color: #fff;
+    border: none;
+    height: 17px;
+    padding: 0.8rem 1.8rem;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.filter-button:hover {
+    background-color: #1a84da;
+}
